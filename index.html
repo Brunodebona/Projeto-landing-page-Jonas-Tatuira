@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JT Surf Boards | Premium Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --accent: #9d50bb;
+            --glass: rgba(255, 255, 255, 0.1);
+            --bg: radial-gradient(circle, #1a1a1a, #000);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg);
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        header {
+            margin: auto;
+            padding: 20px 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Galeria Container com visual Moderno */
+        .galeria-container {
+            flex: 1; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+            position: relative;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px; 
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+
+        /* Estilo dos Links e Imagens */
+        .galeria a {
+            position: relative; /* Necessário para posicionar o nome dentro */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            text-decoration: none;
+            opacity: 0; /* Começa invisível para o JS agir */
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 100%;
+            max-height: 130px;
+            border-radius: 12px;
+            object-fit: contain; /* Preserva a forma da prancha */
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .galeria a:hover img {
+            transform: scale(1.1) rotate(2deg);
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Logo em destaque */
+        .logo-item {
+            grid-column: 2;
+            grid-row: 2;
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .logo {
+            max-height: 160px !important;
+            background: transparent !important;
+            border: none !important;
+            filter: drop-shadow(0 0 10px var(--primary));
+        }
+
+        footer {
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .galeria { gap: 10px; }
+            .galeria img { max-height: 90px; }
+            .logo { max-height: 120px !important; }
+            header h1 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JT Surf Boards</h1>
+        <p>A evolução do seu surf começa aqui</p>
+    </header>
+
+     <div class="galeria-container">
+        <div class="galeria">
+            <a href="https://www.jtsurfboards.com/dalob2" target="_blank">
+                <img src="templates/dalob2.avif" alt="modelo dalob2">
+                <span class="modelo-nome">Dalob 2</span>
+            </a>
+            <a href="https://www.jtsurfboards.com/hot-roll" target="_blank">
+                <img src="templates/hot roll.avif" alt="Modelo hot roll">
+                <span class="modelo-nome">Hot Roll</span>
+            </a>
+            <a href="https://www.jtsurfboards.com/charrua" target="_blank">
+                <img src="templates/charrua.avif" alt="modelo charrua">
+                <span class="modelo-nome">Charrua</span>
+            </a>
+
+            <a href="https://www.jtsurfboards.com/plenitude3" target="_blank">
+                <img src="templates/plenitude3.avif" alt="modelo plenitude3">
+                <span class="modelo-nome">Plenitude 3</span>
+            </a>
+
+            <a href="https://www.jtsurfboards.com/blackbird2" target="_blank">
+                <img src="templates/blackbird2.avif" alt="modelo blackbird2">
+                <span class="modelo-nome">Blackbird 2</span>
+            </a>
+
+            <a href="https://www.jtsurfboards.com/plenitudesummer" target="_blank">
+                <img src="templates/plenitudesummer.avif" alt="modelo plenitude summer">
+                <span class="modelo-nome">Plenitude Summer</span>
+            </a>
+            <a href="https://www.jtsurfboards.com/tapetemagico" target="_blank">
+                <img src="templates/tapetemagico.avif" alt="modelo tapete magico">
+                <span class="modelo-nome">Tapete Mágico</span>
+            </a>
+
+            <a href="https://www.jtsurfboards.com/ninjaboy" target="_blank">
+                <img src="templates/ninjaboy.avif" alt="modelo nija boy">
+                <span class="modelo-nome">Ninja Boy</span>
+            </a>
+
+            <a href="https://www.jtsurfboards.com/highfish" target="_blank">
+                <img src="templates/highfish.avif" alt="modelo high fish">
+                <span class="modelo-nome">High Fish</span>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        © 2026 JT Surf Boards — Em breve mais novidades
+    </footer>
+
+</body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const itens = document.querySelectorAll('.galeria a');
+            itens.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 150 * index); // Efeito cascata
+            });
+        });
+    </script>
+
+</body>
+</html>
